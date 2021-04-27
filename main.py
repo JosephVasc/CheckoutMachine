@@ -34,20 +34,15 @@ class itemTax:
         totalprice = tax + self.unit_price
         return totalprice
 
-
-
-
-
 def mainfunction(state, listofitems):
-    total = 0
+    total = 0.0
 
     for i in range(len(listofitems)):
         item,price,type = listofitems[i]
-        winsound.Beep(1000, 250)
         print("Scanning Item: ", item)
         print("price: ", price)
         print("type: ", type)
-        my_item = itemTax(item.lower(), price, state.upper(), type)
+        my_item = itemTax(item.lower(), price, state.upper(), type.lower())
         my_item.state_tax()
         item_total = my_item.total()
         print("item after tax: ", item_total)
@@ -57,9 +52,8 @@ def mainfunction(state, listofitems):
     return total
 
 
-state = 'ME'
-listofitems= [("suit", 200.00, "clothing"), ("suit", 100.00, "clothing"), ("dog", 200.00, "other"), ("burger", 10.00, "food")]
-print(listofitems)
+state = 'MA'
+listofitems= [("suit", 200.00, "CLOTHING"), ("suit", 100.00, "clothing"), ("dog", 200.00, "other"), ("burger", 10.00, "food")]
 mainfunction(state, listofitems)
 
 
