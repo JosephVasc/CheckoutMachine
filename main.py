@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 import time
-import winsound
+
 
 
 @dataclass
