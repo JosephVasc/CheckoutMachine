@@ -42,6 +42,9 @@ def mainfunction(state, listofitems):
         print("Scanning Item: ", item)
         print("price: ", price)
         print("type: ", type)
+        if price < 0:
+            print("NO RETURNS")
+            return 0
         my_item = itemTax(item.lower(), price, state.upper(), type.lower())
         my_item.state_tax()
         item_total = my_item.total()
@@ -52,9 +55,9 @@ def mainfunction(state, listofitems):
     return total
 
 
-state = 'MA'
-listofitems= [("suit", 200.00, "CLOTHING"), ("suit", 100.00, "clothing"), ("dog", 200.00, "other"), ("burger", 10.00, "food")]
-mainfunction(state, listofitems)
+#state = 'MA'
+#listofitems= [("suit", -200.00, "CLOTHING"), ("suit", 100.00, "clothing"), ("dog", 200.00, "other"), ("burger", 10.00, "food")]
+#mainfunction(state, listofitems)
 
 
 
