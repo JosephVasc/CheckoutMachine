@@ -56,7 +56,7 @@ def mainfunction(state, listofitems):
 
 
 #state = 'MA'
-#listofitems= [("suit", -200.00, "CLOTHING"), ("suit", 100.00, "clothing"), ("dog", 200.00, "other"), ("burger", 10.00, "food")]
+#listofitems= [("suit", 200.00, "CLOTHING"), ("suit", 100.00, "clothing"), ("dog", 200.00, "other"), ("burger", 10.00, "food")]
 #mainfunction(state, listofitems)
 
 
